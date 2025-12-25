@@ -1,4 +1,4 @@
-jiimport logging
+import logging
 import requests
 import json
 import os
@@ -21,7 +21,7 @@ nest_asyncio.apply()
 
 --- ⚙️ CONFIGURATION ---
 
-✅ KEYS
+ KEYS
 
 SCRAPER_API_KEY = "a56d97c8307687fb114fda295f7b7606"
 TOKEN = "8515989457:AAHJw4jBl8W_IJezX_TEWPya7lp1GUatPFs"
@@ -31,20 +31,20 @@ AMAZON_TAG = "pranay0d82-21"
 DB_FILE = "tracker.json"
 MY_DEALS_CHANNEL = "https://t.me/Grabthelootsandoffers"
 
-⏳ CHECK INTERVAL (6 Hours)
+ CHECK INTERVAL (6 Hours)
 
 CHECK_INTERVAL = 21600
 
---- 📝 LOGGING ---
+--- LOGGING ---
 
 logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.INFO)
 
---- 🌐 BACKGROUND WEB SERVER ---
+---  BACKGROUND WEB SERVER ---
 
 app_web = Flask(name)
 
 @app_web.route('/')
-def home(): return "✅ Bot is Online via ScraperAPI!"
+def home(): return " Bot is Online via ScraperAPI!"
 
 def run_web_server():
 port = int(os.environ.get("PORT", 10000))
@@ -61,7 +61,7 @@ except: return {}
 def save_db(data):
 with open(DB_FILE, 'w') as f: json.dump(data, f)
 
---- 🔗 HELPERS ---
+---  HELPERS ---
 
 def create_affiliate_link(url):
 try:
@@ -77,7 +77,7 @@ match = re.search(r'/dp/([A-Z0-9]{10})', url)
 if match: return f"https://pricehistory.app/p/{match.group(1)}"
 return "https://pricehistory.app/"
 
---- 🕵️‍♂️ SMART SCRAPER ---
+---  SMART SCRAPER ---
 
 def get_product_details(url):
 payload = {
@@ -86,7 +86,7 @@ payload = {
 'country_code': 'in',
 'device_type': 'desktop',
 'autoparse': 'false',
-'render': 'true' # ✅ Needed for Coupons
+'render': 'true' #  Needed for Coupons
 }
 
 try:  
@@ -140,7 +140,7 @@ except Exception as e:
     print(f"Scraping Error: {e}")  
     return None, None, 0, None
 
---- 🔄 CHECKING LOGIC (Shared) ---
+---  CHECKING LOGIC (Shared) ---
 
 async def check_prices_logic(bot):
 print("🔄 Running Price Check...")
@@ -159,7 +159,7 @@ for user_id in db:
             new_final, new_orig, new_coupon, _ = get_product_details(url)  
               
             if new_final:  
-                print(f"   ✅ Found Price: {new_final}")  
+                print(f"    Found Price: {new_final}")  
                   
                 # UPDATE DB  
                 db[user_id][idx]['price'] = new_final  
