@@ -27,8 +27,8 @@ from urllib.parse import quote
 nest_asyncio.apply()
 
 # ================== CONFIG ==================
-TOKEN = "PASTE_TELEGRAM_TOKEN"
-SCRAPER_API_KEY = "PASTE_SCRAPERAPI_KEY"
+TOKEN = "8515989457:AAHARhfs1pZ1PokLEn2G8XEvn_XAl4-Udo8"
+SCRAPER_API_KEY = "848a68ab7a4bbef78ad6a246b7aad98a"
 
 AMAZON_TAG = "yourtag-21"
 DB_FILE = "tracker.json"
