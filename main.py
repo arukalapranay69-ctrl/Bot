@@ -15,7 +15,7 @@ from telegram import Update, constants, InlineKeyboardMarkup, InlineKeyboardButt
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, filters, CallbackQueryHandler
 from bs4 import BeautifulSoup
 
-👇 FIX ASYNC ISSUES
+  FIX ASYNC ISSUES
 
 nest_asyncio.apply()
 
