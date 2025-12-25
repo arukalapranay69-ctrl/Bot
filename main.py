@@ -1,4 +1,4 @@
-import logging
+jiimport logging
 import requests
 import json
 import os
@@ -226,7 +226,7 @@ msg = (
 "1️⃣ Send an Amazon Link to start tracking.\n"
 "2️⃣ Set a Target Price to get alerts.\n"
 "3️⃣ Relax! I check prices automatically.\n\n"
-"👇 Deals Channel:"
+"  Deals Channel:"
 )
 keyboard = [[InlineKeyboardButton("🔥 Today's Loot Deals", url=MY_DEALS_CHANNEL)]]
 await update.message.reply_text(msg, parse_mode='Markdown', reply_markup=InlineKeyboardMarkup(keyboard))
@@ -307,7 +307,7 @@ query = update.callback_query
 await query.answer()
 if query.data.startswith("ask_target_"):
 index = query.data.split("_")[2]
-await query.message.reply_text(f"👇 Set Target:\nCopy this: /target_{index} 0", parse_mode='Markdown')
+await query.message.reply_text(f" Set Target:\nCopy this: /target_{index} 0", parse_mode='Markdown')
 
 🎯 SET TARGET
 
