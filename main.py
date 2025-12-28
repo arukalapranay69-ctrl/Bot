@@ -10,7 +10,7 @@ from pymongo import MongoClient
 # ===================== CONFIG =====================
 
 TOKEN = os.getenv("8515989457:AAFGO1IYdB9hC7HSVfZyJNviWYN7Ao5df60")
-MONGO_URI = os.getenv("MONGO_URI = mongodb+srv://admin:Pranay123@cluster0.tr5neeu.mongodb.net/pricebot?retryWrites=true&w=majority")
+MONGO_URI = os.getenv("MONGO_URI = mongodb+srv://admin:Pranay123@cluster0.tr5neeu.mongodb.net/?appName=Cluster0")
 
 AMAZON_TAG = "pranay0d82-21"
 CHECK_INTERVAL = 43200  # 12 hours
